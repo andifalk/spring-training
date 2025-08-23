@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Directly setting name property -->
+    <bean name="messageService1" class="org.example.core.message.MessageService1Impl" init-method="init"
+          primary="true">
+        <property name="name" value="Spring XML World"/>
+    </bean>
+
+
+    <!-- Using Dependency Injection for name -->
+    <bean name="messageService2" class="org.example.core.message.MessageService2Impl" init-method="init">
+        <property name="name" ref="nameBean"/>
+    </bean>
+
+
+    <bean name="nameBean" class="org.example.core.message.NameImpl">
+        <constructor-arg value="Spring XML World"/>
+    </bean>
+
+</beans>
