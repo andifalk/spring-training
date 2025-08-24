@@ -10,7 +10,7 @@ public class NameConfiguration {
 
     @Bean
     public Name name() {
-        return new NameImpl("Spring XML World");
+        return new NameImpl("Spring Annotation World");
     }
 
 }

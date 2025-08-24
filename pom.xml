@@ -64,7 +64,7 @@
     </build>
 
     <modules>
-        <module>1_core/boot-initial</module>
+        <module>1_core/boot-starter</module>
         <module>1_core/core-starter</module>
         <module>1_core/core-xml</module>
         <module>1_core/core-java</module>

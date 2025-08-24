@@ -27,19 +27,19 @@ class CoreAnnotationConfigApplicationTests {
         assertThat(messageServiceBean1)
                 .isNotNull()
                 .extracting(MessageService::sayHello)
-                .isEqualTo("Hello, Spring XML World!");
+                .isEqualTo("Hello, Spring Annotation World!");
 
         MessageService messageServiceBean2 = (MessageService) context.getBean("messageService2");
         assertThat(messageServiceBean2)
                 .isNotNull()
                 .extracting(MessageService::sayHello)
-                .isEqualTo("Hello, Spring XML World!");
+                .isEqualTo("Hello, Spring Annotation World!");
     }
 
     @Test
     void messageTest(@Autowired MessageService messageService) {
         String msg = messageService.sayHello();
-        assertThat(msg).isEqualTo("Hello, Spring XML World!");
+        assertThat(msg).isEqualTo("Hello, Spring Annotation World!");
     }
 
 }

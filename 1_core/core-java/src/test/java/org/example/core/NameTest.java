@@ -11,6 +11,6 @@ public class NameTest {
     @Test
     public void testNameImpl() {
         Name name = new NameImpl("World");
-        assertThat(name.getValue().equals("World"));
+        assertThat(name.getValue()).isEqualTo("World");
     }
 }
